@@ -1,0 +1,17 @@
+[package]
+name = "gpui-lab"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.89"
+
+[dependencies]
+gpui = { version = "=0.2.2", default-features = false, features = ["runtime_shaders", "font-kit"] }
+
+log = "0.4"
+
+[profile.dev]
+opt-level = 1
+debug = 0
+
+[profile.dev.package."*"]
+opt-level = 2

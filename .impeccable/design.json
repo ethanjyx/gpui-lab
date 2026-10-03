@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-03T21:59:36.799542+00:00",
+  "title": "Design System: GPUI Lab",
+  "extensions": {
+    "typographyMeta": {
+      "title": {
+        "displayName": "Application title",
+        "purpose": "Native workbench identity."
+      },
+      "measurement": {
+        "displayName": "Measured value",
+        "purpose": "Changing numeric callback measurements with adjacent units."
+      },
+      "mono": {
+        "displayName": "Instrument annotation",
+        "purpose": "Record identifiers, signal values, shortcuts, and rendered-row count."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "particle-animation",
+        "value": "Window::on_next_frame",
+        "purpose": "Procedural Orbit/Wave movement follows native animation callbacks. Pause retains the scene and stops scheduling animation."
+      },
+      {
+        "name": "control-hover",
+        "value": "immediate",
+        "purpose": "Pointer hover changes control or record fill without an animated transition."
+      }
+    ],
+    "breakpoints": []
+  },
+  "components": [],
+  "narrative": {
+    "northStar": "Scientific visualization workbench",
+    "overview": "A restrained native macOS instrument: pale blue-gray chrome frames a dark, animated particle field. Compact controls and measured typography make load, selection, and timing easy to inspect while the drawing remains the visual center. This records the implemented Rust/GPUI prototype, using `src/main.rs` as authority.",
+    "keyCharacteristics": [
+      "Pale instrument surfaces, a dark plot, and precise separators.",
+      "Teal interaction states; turquoise and amber procedural graphics.",
+      "System UI type paired with Menlo for identifiers and measurements.",
+      "Dense desktop controls with visible keyboard hints."
+    ],
+    "rules": [
+      {
+        "name": "The State Rule",
+        "body": "Preserve distinct active, inactive, and hover fills. Labels and displayed values explain what each state means.",
+        "section": "colors"
+      },
+      {
+        "name": "The Measurement Rule",
+        "body": "Keep values and identifiers monospaced, preserve units beside measurements, and avoid enlarging utility labels into competing headlines.",
+        "section": "typography"
+      }
+    ],
+    "dos": [
+      "Do preserve the native desktop shell, compact control density, and flexible plot beside the fixed-width record browser.",
+      "Do use the same control treatments and monospaced measurement roles when extending the workbench.",
+      "Do check the default and minimum window sizes, including paused, selected-row, and command-panel states.",
+      "Do keep synthetic data labels, measurement units, and timing limitations visible."
+    ],
+    "donts": [
+      "Don't replace the plot with imagery or add decorative cards, gradients, shadows, or unrelated accent colors.",
+      "Don't report callback rate as GPU execution speed or a controlled comparative benchmark.",
+      "Don't treat the prototype's keyboard bindings as evidence of complete platform accessibility."
+    ]
+  }
+}
